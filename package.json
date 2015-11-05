@@ -1,5 +1,5 @@
 { "name": "item-selection"
-, "version": "0.0.0"
+, "version": "1.0.0"
 , "description": "Manage item multi-selections."
 , "license": "MIT"
 , "repository": "goto-bus-stop/item-selection"
