@@ -7,6 +7,7 @@
 , "main": "immutable"
 , "scripts":
   { "build": "babel --presets es2015 --out-dir . src"
+  , "prepublish": "npm run build"
   , "test": "standard && ava ./test.js" }
 , "files": [ "immutable.js", "mutable.js" ]
 , "keywords":
