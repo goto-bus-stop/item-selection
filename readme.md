@@ -4,6 +4,8 @@ Manage multi-`<select>` style selections in arrays.
 
 ## Usage
 
+[Demo](https://goto-bus-stop.github.io/item-selection) - [Demo source code](./example.js)
+
 ```js
 import itemSelection from 'item-selection'
 
