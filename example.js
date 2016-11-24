@@ -1,3 +1,4 @@
+/** @jsx element */
 import { render, tree } from 'deku'
 import element from 'virtual-element'
 import itemSelection from 'item-selection'
@@ -12,12 +13,12 @@ const lithuanianIslands = [
 
 const List = {
   // initialise the selection. nothing is selected by default.
-  initialState(props) {
+  initialState (props) {
     return {
       selection: itemSelection(props.items)
     }
   },
-  render({ props, state }, setState) {
+  render ({ props, state }, setState) {
     const selection = state.selection
     const onMouseDown = index => e => {
       // these events map straight to the different itemSelection methods.
@@ -38,7 +39,7 @@ const List = {
       <div>
         {/* retrieve all selected items using .get(), or selected indices using .getIndices(). */}
         <p>Selected: {selection.get().join(', ') || 'None! click some items below:'}</p>
-        <ul class="list">
+        <ul class='list'>
           {props.items.map((island, i) => {
             // check if an item is selected using .isSelected(). .isSelected() uses
             // `===` to check if the given item is in the selection, so it might give a
@@ -47,8 +48,10 @@ const List = {
             // always unique.
             const selected = selection.isSelected(island)
             return (
-              <li class={`list-item ${selected ? 'is-selected' : ''}`}
-                  onMouseDown={onMouseDown(i)}>
+              <li
+                class={`list-item ${selected ? 'is-selected' : ''}`}
+                onMouseDown={onMouseDown(i)}
+              >
                 {island}
               </li>
             )
