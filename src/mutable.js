@@ -1,4 +1,4 @@
-import ItemSelection from './immutable'
+import { ItemSelection } from './immutable'
 
 class MutableItemSelection extends ItemSelection {
   set (selection, lastIndex) {
