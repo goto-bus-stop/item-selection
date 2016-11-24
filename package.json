@@ -17,8 +17,12 @@
     "test": "standard && ava ./test.js"
   },
   "files": [
-    "immutable.js",
-    "mutable.js"
+    "README.md",
+    "LICENSE",
+    "/immutable.js",
+    "/mutable.js",
+    "/es/immutable.js",
+    "/es/mutable.js"
   ],
   "keywords": [
     "selection",
