@@ -25,8 +25,8 @@ selection.get() // ['a', 'c']
 ```
 
 An `itemSelection` is immutable by default, i.e. it returns a new selection
-object. Use `require('item-selection/mutable')` if you want to mutate the
-current selection object instead.
+object. Use `import itemSelection from 'item-selection/mutable'` if you want to
+mutate the current selection object instead.
 
 ## API
 
@@ -35,8 +35,8 @@ current selection object instead.
 Creates a new selection manager object.
 
 **All mutation methods return a new selection manager object by default. If you
-want to mutate and reuse the same object,
-use `require('item-selection/mutable')`.**
+want to mutate and reuse the same object, use
+`import itemSelection from 'item-selection/mutable'`.**
 
 ### selection = selection.select(index)
 
