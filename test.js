@@ -12,7 +12,6 @@ test('.select() should select a single item', t => {
       .get(),
       [ items[7] ]
   )
-  t.end()
 })
 
 test('.select() should reset the selection', t => {
@@ -23,7 +22,6 @@ test('.select() should reset the selection', t => {
       .get(),
     [ items[11] ]
   )
-  t.end()
 })
 
 test('.selectToggle() should select multiple items', t => {
@@ -34,7 +32,6 @@ test('.selectToggle() should select multiple items', t => {
       .get(),
     [ items[5], items[7] ]
   )
-  t.end()
 })
 
 test('.selectToggle() should deselect a previously selected item', t => {
@@ -47,7 +44,6 @@ test('.selectToggle() should deselect a previously selected item', t => {
       .get(),
     [ items[8], items[11] ]
   )
-  t.end()
 })
 
 test('.selectRange(start, end) should select an inclusive range', t => {
@@ -57,7 +53,6 @@ test('.selectRange(start, end) should select an inclusive range', t => {
       .get(),
     items.slice(3, 18)
   )
-  t.end()
 })
 
 test('.selectRange(start, end) should select reverse ranges', t => {
@@ -67,7 +62,6 @@ test('.selectRange(start, end) should select reverse ranges', t => {
       .get(),
     items.slice(3, 18)
   )
-  t.end()
 })
 
 test('.selectRange(index) should select a range based on a previous .select()', t => {
@@ -79,7 +73,6 @@ test('.selectRange(index) should select a range based on a previous .select()', 
       .get(),
     items.slice(3, 13)
   )
-  t.end()
 })
 
 test('.selectRange(index) should select a range based on a previous .selectToggle()', t => {
@@ -90,7 +83,6 @@ test('.selectRange(index) should select a range based on a previous .selectToggl
       .get(),
     items.slice(7, 19)
   )
-  t.end()
 })
 
 test('.selectRange() should reset the selection', t => {
@@ -101,7 +93,6 @@ test('.selectRange() should reset the selection', t => {
       .get(),
     [ items[11], items[12] ]
   )
-  t.end()
 })
 
 test('.selectRange() + .selectToggle()', t => {
@@ -113,7 +104,6 @@ test('.selectRange() + .selectToggle()', t => {
       .get(),
     [ ...items.slice(1, 4), items[5] ]
   )
-  t.end()
 })
 
 test('Deselecting an item should remove the range starting point', t => {
@@ -125,5 +115,4 @@ test('Deselecting an item should remove the range starting point', t => {
       .get(),
     [ items[0] ]
   )
-  t.end()
 })
