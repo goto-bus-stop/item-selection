@@ -11,10 +11,12 @@
   "scripts": {
     "build:es": "babel src --out-dir es",
     "build:lib": "babel --plugins transform-es2015-modules-commonjs es --out-dir .",
-    "build": "npm run build:es && npm run build:lib",
+    "build": "npm-run-all build:es build:lib",
     "example": "BABEL_ENV=example browserify --debug -t [ babelify ] -r ./:item-selection -e example.js -o example.build.js",
-    "prepublish": "npm run build",
-    "test": "standard && tape ./test.js"
+    "prepublish": "npm-run-all build",
+    "test:lint": "standard",
+    "test:tape": "tape ./test.js",
+    "test": "npm-run-all test:*"
   },
   "files": [
     "README.md",
@@ -42,6 +44,7 @@
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
     "deku": "^1.0.0",
+    "npm-run-all": "^4.0.2",
     "standard": "^9.0.2",
     "tape": "^4.6.3",
     "virtual-element": "^1.2.0"
