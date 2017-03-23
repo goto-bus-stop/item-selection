@@ -42,6 +42,7 @@
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
     "deku": "^1.0.0",
+    "standard": "^9.0.2",
     "tape": "^4.6.3",
     "virtual-element": "^1.2.0"
   },
