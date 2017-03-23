@@ -1,11 +1,12 @@
-import itemSelection from './'
-import test from 'ava'
+const itemSelection = require('./').default
+const test = require('tape')
 
 const items = []
 while (items.length < 20) items.push({ idx: items.length })
 
 test('.select() should select a single item', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .select(5)
       .select(7)
@@ -15,7 +16,8 @@ test('.select() should select a single item', t => {
 })
 
 test('.select() should reset the selection', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .selectRange(3, 7)
       .select(11)
@@ -25,7 +27,8 @@ test('.select() should reset the selection', t => {
 })
 
 test('.selectToggle() should select multiple items', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .selectToggle(5)
       .selectToggle(7)
@@ -35,7 +38,8 @@ test('.selectToggle() should select multiple items', t => {
 })
 
 test('.selectToggle() should deselect a previously selected item', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .selectToggle(5)
       .selectToggle(8)
@@ -47,7 +51,8 @@ test('.selectToggle() should deselect a previously selected item', t => {
 })
 
 test('.selectRange(start, end) should select an inclusive range', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .selectRange(3, 17)
       .get(),
@@ -56,7 +61,8 @@ test('.selectRange(start, end) should select an inclusive range', t => {
 })
 
 test('.selectRange(start, end) should select reverse ranges', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .selectRange(17, 3)
       .get(),
@@ -65,7 +71,8 @@ test('.selectRange(start, end) should select reverse ranges', t => {
 })
 
 test('.selectRange(index) should select a range based on a previous .select()', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .selectToggle(18)
       .select(3)
@@ -76,7 +83,8 @@ test('.selectRange(index) should select a range based on a previous .select()', 
 })
 
 test('.selectRange(index) should select a range based on a previous .selectToggle()', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .selectToggle(7)
       .selectRange(18)
@@ -86,7 +94,8 @@ test('.selectRange(index) should select a range based on a previous .selectToggl
 })
 
 test('.selectRange() should reset the selection', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .select(1)
       .selectRange(11, 12)
@@ -96,7 +105,8 @@ test('.selectRange() should reset the selection', t => {
 })
 
 test('.selectRange() + .selectToggle()', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .select(1)
       .selectRange(3)
@@ -107,7 +117,8 @@ test('.selectRange() + .selectToggle()', t => {
 })
 
 test('Deselecting an item should remove the range starting point', t => {
-  t.same(
+  t.plan(1)
+  t.deepEqual(
     itemSelection(items)
       .selectToggle(7)
       .selectToggle(7)

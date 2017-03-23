@@ -14,7 +14,7 @@
     "build": "npm run build:es && npm run build:lib",
     "example": "BABEL_ENV=example browserify --debug -t [ babelify ] -r ./:item-selection -e example.js -o example.build.js",
     "prepublish": "npm run build",
-    "test": "standard && ava ./test.js"
+    "test": "standard && tape ./test.js"
   },
   "files": [
     "README.md",
@@ -34,7 +34,6 @@
     "ranged": "^0.0.3"
   },
   "devDependencies": {
-    "ava": "^0.18.0",
     "babel-cli": "^6.18.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
@@ -43,6 +42,7 @@
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
     "deku": "^1.0.0",
+    "tape": "^4.6.3",
     "virtual-element": "^1.2.0"
   },
   "babel": {
