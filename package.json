@@ -44,7 +44,7 @@
     "babel-register": "^6.24.0",
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
-    "cross-env": "^3.2.4",
+    "cross-env": "^4.0.0",
     "deku": "^1.0.0",
     "npm-run-all": "^4.0.2",
     "standard": "^9.0.2",
