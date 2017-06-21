@@ -1,5 +1,7 @@
 # item-selection
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/goto-bus-stop/item-selection.svg)](https://greenkeeper.io/)
+
 Manage multi-`<select>` style selections in arrays.
 
 ## Usage
