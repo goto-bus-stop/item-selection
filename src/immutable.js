@@ -1,4 +1,14 @@
-import range from 'ranged'
+function range (start, end) {
+  if (start > end) {
+    [start, end] = [end, start]
+  }
+
+  const list = []
+  for (let i = start; i < end; i++) {
+    list.push(i)
+  }
+  return list
+}
 
 const includes = (arr, item) => arr.indexOf(item) !== -1
 

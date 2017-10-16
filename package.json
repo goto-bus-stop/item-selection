@@ -32,9 +32,6 @@
     "list",
     "collection"
   ],
-  "dependencies": {
-    "ranged": "^0.0.3"
-  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
