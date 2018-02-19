@@ -11,7 +11,7 @@ test('.select() should select a single item', t => {
       .select(5)
       .select(7)
       .get(),
-      [ items[7] ]
+    [ items[7] ]
   )
 })
 
