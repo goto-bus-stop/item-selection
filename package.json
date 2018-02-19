@@ -44,7 +44,7 @@
     "cross-env": "^5.0.0",
     "deku": "^1.0.0",
     "npm-run-all": "^4.0.2",
-    "standard": "^10.0.0",
+    "standard": "^11.0.0",
     "tape": "^4.6.3",
     "virtual-element": "^1.2.0"
   },
