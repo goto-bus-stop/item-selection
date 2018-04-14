@@ -1,6 +1,6 @@
 {
   "name": "item-selection",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Manage item multi-selections.",
   "license": "MIT",
   "repository": "goto-bus-stop/item-selection",
