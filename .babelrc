@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["env", {
+    ["@babel/preset-env", {
       "modules": false,
       "loose": true
     }]
@@ -8,9 +8,9 @@
   "env": {
     "example": {
       "plugins": [
-        "syntax-jsx",
-        ["transform-react-jsx", { "pragma": "element" }],
-        "transform-es2015-modules-commonjs"
+        "@babel/plugin-syntax-jsx",
+        ["@babel/plugin-transform-react-jsx", { "pragma": "element" }],
+        "@babel/plugin-transform-modules-commonjs"
       ]
     }
   }
