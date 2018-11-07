@@ -33,7 +33,7 @@
     "collection"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
+    "@babel/cli": "^7.1.5",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-jsx": "^7.0.0",
     "@babel/plugin-transform-modules-commonjs": "^7.0.0",
