@@ -53,7 +53,7 @@ class ItemSelection {
   }
 
   add (index) {
-    return this.set([ ...this.selection, index ], this.lastIndex)
+    return this.set([...this.selection, index], this.lastIndex)
   }
 
   remove (index) {
@@ -61,7 +61,7 @@ class ItemSelection {
   }
 
   select (index) {
-    return this.set([ index ], index)
+    return this.set([index], index)
   }
 
   deselect (index) {
@@ -82,7 +82,7 @@ class ItemSelection {
     if (this.isSelectedIndex(index)) {
       return this.remove(index)
     }
-    return this.set([ ...this.selection, index ], index)
+    return this.set([...this.selection, index], index)
   }
 
   selectAll () {

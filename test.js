@@ -11,7 +11,7 @@ test('.select() should select a single item', t => {
       .select(5)
       .select(7)
       .get(),
-    [ items[7] ]
+    [items[7]]
   )
 })
 
@@ -22,7 +22,7 @@ test('.select() should reset the selection', t => {
       .selectRange(3, 7)
       .select(11)
       .get(),
-    [ items[11] ]
+    [items[11]]
   )
 })
 
@@ -33,7 +33,7 @@ test('.selectToggle() should select multiple items', t => {
       .selectToggle(5)
       .selectToggle(7)
       .get(),
-    [ items[5], items[7] ]
+    [items[5], items[7]]
   )
 })
 
@@ -46,7 +46,7 @@ test('.selectToggle() should deselect a previously selected item', t => {
       .selectToggle(11)
       .selectToggle(5)
       .get(),
-    [ items[8], items[11] ]
+    [items[8], items[11]]
   )
 })
 
@@ -100,7 +100,7 @@ test('.selectRange() should reset the selection', t => {
       .select(1)
       .selectRange(11, 12)
       .get(),
-    [ items[11], items[12] ]
+    [items[11], items[12]]
   )
 })
 
@@ -112,7 +112,7 @@ test('.selectRange() + .selectToggle()', t => {
       .selectRange(3)
       .selectToggle(5)
       .get(),
-    [ ...items.slice(1, 4), items[5] ]
+    [...items.slice(1, 4), items[5]]
   )
 })
 
@@ -124,6 +124,6 @@ test('Deselecting an item should remove the range starting point', t => {
       .selectToggle(7)
       .selectRange(0)
       .get(),
-    [ items[0] ]
+    [items[0]]
   )
 })
