@@ -7,6 +7,6 @@ script:
 
 node_js:
   - "stable"
-  - "9"
+  - "10"
   - "8"
   - "6"
