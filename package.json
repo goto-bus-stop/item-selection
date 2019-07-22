@@ -1,37 +1,9 @@
 {
   "name": "item-selection",
-  "version": "1.2.1",
   "description": "Manage item multi-selections.",
-  "license": "MIT",
-  "repository": "goto-bus-stop/item-selection",
+  "version": "1.2.1",
   "author": "Renée Kooi <renee@kooi.me>",
-  "main": "./immutable",
-  "jsnext:main": "es/immutable",
-  "module": "es/immutable",
-  "scripts": {
-    "build:es": "babel src --out-dir es",
-    "build:lib": "babel --plugins @babel/plugin-transform-modules-commonjs es --out-dir .",
-    "build": "npm-run-all build:es build:lib",
-    "example": "cross-env BABEL_ENV=example browserify --debug -t babelify -r ./:item-selection -e example.js -o example.build.js",
-    "prepublish": "npm-run-all build",
-    "test:lint": "standard",
-    "test:tape": "tape -r @babel/register ./test.js",
-    "test": "npm-run-all test:*"
-  },
-  "files": [
-    "README.md",
-    "LICENSE",
-    "/immutable.js",
-    "/mutable.js",
-    "/es/immutable.js",
-    "/es/mutable.js"
-  ],
-  "keywords": [
-    "selection",
-    "range",
-    "list",
-    "collection"
-  ],
+  "bugs": "https://github.com/goto-bus-stop/item-selection/issues",
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
@@ -48,5 +20,35 @@
     "standard": "^13.0.0",
     "tape": "^4.11.0",
     "virtual-element": "^1.2.0"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "/immutable.js",
+    "/mutable.js",
+    "/es/immutable.js",
+    "/es/mutable.js"
+  ],
+  "homepage": "https://github.com/goto-bus-stop/item-selection",
+  "jsnext:main": "es/immutable",
+  "keywords": [
+    "collection",
+    "list",
+    "range",
+    "selection"
+  ],
+  "license": "MIT",
+  "main": "./immutable",
+  "module": "es/immutable",
+  "repository": "goto-bus-stop/item-selection",
+  "scripts": {
+    "build": "npm-run-all build:es build:lib",
+    "build:es": "babel src --out-dir es",
+    "build:lib": "babel --plugins @babel/plugin-transform-modules-commonjs es --out-dir .",
+    "example": "cross-env BABEL_ENV=example browserify --debug -t babelify -r ./:item-selection -e example.js -o example.build.js",
+    "prepublish": "npm-run-all build",
+    "test": "npm-run-all test:*",
+    "test:lint": "standard",
+    "test:tape": "tape -r @babel/register ./test.js"
   }
 }
