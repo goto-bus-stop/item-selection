@@ -10,6 +10,18 @@ const lithuanianIslands = [
   'Žingelinė', 'Žvėrynas Neris Island'
 ]
 
+function ListItem ({ island, selected, onMouseDown }) {
+  const className = `list-item ${selected ? 'is-selected' : ''}`
+  return (
+    <li
+      className={className}
+      onMouseDown={onMouseDown}
+    >
+      {island}
+    </li>
+  )
+}
+
 function List ({ items }) {
   const [selection, updateSelection] = React.useState(() => itemSelection(items))
 
@@ -31,30 +43,25 @@ function List ({ items }) {
     }
   }
 
-  function ListItem ({ island, index }) {
-    // check if an item is selected using .isSelected(). .isSelected() uses // `===` to check if the given item is in the selection, so it might give a
-    // false positive if your list contains the same string twice, for example.
-    // you can also use .isSelectedIndex(i) in that case, because indices are
-    // always unique.
-    const selected = selection.isSelected(island)
-    const className = `list-item ${selected ? 'is-selected' : ''}`
-    return (
-      <li
-        className={className}
-        onMouseDown={onMouseDown(index)}
-      >
-        {island}
-      </li>
-    )
-  }
-
   // retrieve all selected items using .get(), or selected indices using .getIndices()
   const selectionString = selection.get().join(', ') || 'None! click some items below:'
   return (
     <div>
       <p>Selected: {selectionString}</p>
       <ul className='list'>
-        {items.map((island, index) => <ListItem key={island} island={island} index={index} />)}
+        {items.map((island, index) => (
+          // check if an item is selected using .isSelected(). .isSelected() uses
+          // `===` to check if the given item is in the selection, so it might give a
+          // false positive if your list contains the same string twice, for example.
+          // you can also use .isSelectedIndex(i) in that case, because indices are
+          // always unique.
+          <ListItem
+            key={island}
+            island={island}
+            selected={selection.isSelected(island)}
+            onMouseDown={onMouseDown(index)}
+          />
+        ))}
       </ul>
     </div>
   )
