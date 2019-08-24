@@ -54,7 +54,7 @@ function List ({ items }) {
     <div>
       <p>Selected: {selectionString}</p>
       <ul className='list'>
-        {items.map((island, index) => <ListItem island={island} index={index} />)}
+        {items.map((island, index) => <ListItem key={island} island={island} index={index} />)}
       </ul>
     </div>
   )
