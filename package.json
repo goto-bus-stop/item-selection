@@ -1,7 +1,7 @@
 {
   "name": "item-selection",
   "description": "Manage item multi-selections.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "Renée Kooi <renee@kooi.me>",
   "bugs": "https://github.com/goto-bus-stop/item-selection/issues",
   "devDependencies": {
