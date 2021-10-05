@@ -15,7 +15,6 @@
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "cross-env": "^7.0.0",
-    "npm-run-all": "^4.0.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "standard": "^15.0.0",
@@ -42,13 +41,13 @@
   "module": "es/immutable",
   "repository": "goto-bus-stop/item-selection",
   "scripts": {
-    "build": "npm-run-all build:es build:lib",
+    "build": "npm run build:es && npm run build:lib",
     "build:es": "babel src --out-dir es",
     "build:lib": "babel --plugins @babel/plugin-transform-modules-commonjs es --out-dir .",
     "example": "cross-env BABEL_ENV=example browserify --debug -t babelify -r ./:item-selection -e example.js -o example.build.js",
-    "prepublish": "npm-run-all build",
-    "test": "npm-run-all test:*",
-    "test:lint": "standard",
-    "test:tape": "tape -r @babel/register ./test.js"
+    "prepublish": "npm run build",
+    "lint": "standard",
+    "tests-only": "tape -r @babel/register ./test.js",
+    "test": "npm run lint && npm run tests-only"
   }
 }
