@@ -34,9 +34,10 @@ mutate the current selection object instead.
 
 Creates a new selection manager object.
 
-**All mutation methods return a new selection manager object by default. If you
-want to mutate and reuse the same object, use
-`import itemSelection from 'item-selection/mutable'`.**
+> [!IMPORTANT]
+> All mutation methods return a new selection manager object by default. If you
+> want to mutate and reuse the same object, use
+> `import itemSelection from 'item-selection/mutable'`.
 
 ### selection = selection.select(index)
 
